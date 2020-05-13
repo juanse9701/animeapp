@@ -2,8 +2,37 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
 }
 
 body {
     min-height: 100Vh;
+    width: 100%;
+    background-color: #222831;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    color: whitesmoke;
+}
+
+footer a {
+    color: tomato;
+}
+
+.title {
+    font-size: 1.5em;
+    padding: 1.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
 }

@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,300&display=swap');
+
 :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
+    font-family: 'Jost', sans-serif;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -8,9 +9,10 @@
 
   .header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    background-color: #160f30;
-    padding: 15px 0;
+    background-color: #393e46;
+    padding: 15px 2rem;
     color: white;
   }
 
@@ -27,10 +29,39 @@
 
   .nav-list {
     list-style: none;
-    display: flex;
   }
 
   .nav-item {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-bar {
+    fill: white;
+  }
+
+  @media screen and (min-width: 375px) {
+
+    .nav-list {
+      display: none;
+    }
+
+  }
+
+  @media screen and (min-width: 678px) {
+
+   .nav-menu {
+     display: none;
+   }
+
+   .nav-list {
+     display: flex;
+   }
+   
+
   }
