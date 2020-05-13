@@ -1,6 +1,6 @@
 # AnimeListApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3. your function is generate a list of animes that obtain with API REST Jinkan
 
 ## Development server
 
