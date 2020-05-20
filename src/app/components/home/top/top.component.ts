@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../home.service';
+import { TopItem } from '../home.interface';
 
 @Component({
   selector: 'app-top',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopComponent implements OnInit {
 
-  constructor() { }
+  topList: TopItem[];
+  constructor(private homeService: HomeService) {
+   }
 
   ngOnInit(): void {
+    this.getTopAnime();
+  }
+
+  getTopAnime() {
+    this.homeService.getTop().subscribe( topList => {
+     this.topList = topList.filter( (v, i) => i < 5) || [];
+    }
+    );
   }
 
 }

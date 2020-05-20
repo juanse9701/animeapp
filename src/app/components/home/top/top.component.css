@@ -1,20 +1,7 @@
-:host{
-    --columns: 1fr;
-}
-
 
 .wrapper {
     display: grid;
-    gap: 5px;
-    grid-template-columns: var(--columns) ;
+    gap: 7px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.card {
-    width: 300px;
-}
-
-.card-img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-}

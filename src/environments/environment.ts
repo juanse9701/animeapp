@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: 'https://api.jikan.moe/v3/anime/'
+  API: 'https://api.jikan.moe/v3/'
 };
 
 /*
