@@ -91,7 +91,7 @@
     transform: translateY(0);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .card {
         width: 110px;
         height: 200px;
@@ -115,4 +115,24 @@
         font-size: .5em;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+    .content-img::before {
+        opacity: 1;
+        padding-top: 90%;
+    }
+
+    .card-title{
+        font-size: 1em;
+        transform: translateY(0);
+    }
+
+    .card-list{
+        transform: translateY(0);
+    }
+
+    .card-list .card-list-item {
+        font-size: .75em;
+    }
 }
