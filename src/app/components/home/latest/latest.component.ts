@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from '../home.service';
+import { Observable } from 'rxjs';
+import { Season } from '../home.interface';
 
 @Component({
   selector: 'app-latest',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestComponent implements OnInit {
 
-  constructor() { }
+  $animes: Observable<Season[]>;
+  constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
+    this.getUpcomingAnimes();
   }
 
+  getUpcomingAnimes(): void {
+    this.$animes = this.homeService.getUpcomingAnime();
+  }
 }

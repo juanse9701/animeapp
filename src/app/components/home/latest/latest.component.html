@@ -1,3 +1,15 @@
-<section class="container">
+<ng-container *ngIf="$animes | async as animes">
+  <section class="container">
     <h3 class="title">Proximos Animes</h3>
-</section>
+    <div class="container-animes">
+      <ng-container *ngFor="let anime of animes">
+        <app-card
+          [name]="anime?.title"
+          [src]="anime?.image_url"
+          [alt]="anime?.title"
+          [genres]="anime?.genres"
+        ></app-card>
+      </ng-container>
+    </div>
+  </section>
+</ng-container>

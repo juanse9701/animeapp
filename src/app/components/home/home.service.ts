@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable} from 'rxjs';
-import { map, tap, filter } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import {  TopItem, Season } from './home.interface';
 
@@ -25,4 +25,11 @@ export class HomeService {
       map( result => result.anime.filter(({}, index: number) => index < 20 ))
     );
   }
+
+  getUpcomingAnime(): Observable<Season[]> {
+    return this.httpclient.get<any>(`${environment.API}season/later`).pipe(
+      map( result => result.anime.filter(({}, index: number) => index < 20 )),
+    );
+  }
+
 }
