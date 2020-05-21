@@ -15,3 +15,25 @@ export interface TopItem {
 export interface TopList {
     top: Array<TopItem>;
 }
+
+/* ------ Season Anime------------ */
+
+export interface Season {
+    mal_id: number;
+    url: string;
+    title: string;
+    image_url: string;
+    synopsis: string;
+    type: string;
+    airing_start: string;
+    episodes: number;
+    members: number;
+    genres?: (Genres)[] | null;
+  }
+
+export interface Genres {
+    mal_id: number;
+    type: string;
+    name: string;
+    url: string;
+}

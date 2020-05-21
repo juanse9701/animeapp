@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopComponent } from './top.component';
-import { CardModule } from 'src/app/shared/UI/card/card.module';
+import { CardTopModule } from 'src/app/shared/UI/card-top/card-top.module';
 
 
 
@@ -9,7 +9,8 @@ import { CardModule } from 'src/app/shared/UI/card/card.module';
   declarations: [TopComponent],
   imports: [
     CommonModule,
-    CardModule
+    CardTopModule
+/*     CardTopModule */
   ],
   exports: [TopComponent]
 })

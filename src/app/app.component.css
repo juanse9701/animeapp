@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,300&display=swap');
-
-:host {
-    font-family: 'Jost', sans-serif;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
 
   .header {
+    position: sticky;
+    top: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
     background-color: #393e46;
     padding: 15px 2rem;
     color: white;
+    z-index: 100;
   }
 
   .logo {

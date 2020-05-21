@@ -8,18 +8,10 @@
 
 .content-display {
     display: flex;
+    align-items: center;
     width: 100%;
+    min-height: 350px;
     overflow-x: scroll;
-}
-
-.new-item {
-    background-color: tomato;
-    width: 200px;
-    height: 100px;
-}
-
-.content:nth-child(n+2) {
-    margin-left: 5px;
 }
 
 /* Scroll-bar */
@@ -57,4 +49,11 @@
 .content-display::-webkit-scrollbar-track:hover, 
 .content-display::-webkit-scrollbar-track:active {
     background-color: #d4d4d4;
+}
+
+@media screen and (max-width: 375px) {
+    .content-display {
+        min-height: 220px;
+    }
+
 }

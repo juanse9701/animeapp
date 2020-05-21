@@ -9,6 +9,6 @@ import { CardTopComponent } from './card-top.component';
   imports: [
     CommonModule
   ],
-  exports: [CardTopModule]
+  exports: [CardTopComponent]
 })
 export class CardTopModule { }

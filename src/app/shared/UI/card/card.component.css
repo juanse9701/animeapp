@@ -1,48 +1,118 @@
-.card {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+:host:nth-child(n+2){
+    margin-left: 7px;
 }
 
- .div {
+.card {
+    display: block;
     position: relative;
-    min-height: 400px;
-    height: 100%;
-    transition: .5s;
- }
-.card-img {
-    object-fit: contain;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    transition: .3s ease .5s;
+}
+
+.card:hover {
+    margin: 0 14px;
+    width: 230px;
+    height: 350px;
+}
+
+/* ----------- Imagen de la tarjeta  ------------ */
+.card:hover .content-img::before {
+    opacity: 1;
+}
+
+.content-img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 60%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: .3s ease .5s;
+}
+
+.content-img {
+    display: block;
+    padding-top:56.25%; /* Relación: 16/9 = 56.25% */
+}
+
+.content-img img {
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    filter: brightness(1);
-    transition: .5s;
 }
+
+/* -----  TITULOS ----- */
 
 .card-title {
     position: absolute;
-    display: flex ;
-    justify-content: space-between;
-    bottom: 0;
+    bottom: 40px;
     left: 0;
+    text-align: center;
     right: 0;
-    transform: translateY(100%);
-    transition: .5s;
+    line-height: 1;
     font-size: 1.3em;
-}
-.card-title .fav {
-    background: none;
-    border: none;
-}
-.card:hover .div {
-    filter: blur(3px);
+    font-weight: 600;
+    transform: translateY(120px);
+    transition: .3s ease .5s;
+    z-index: 2;
 }
 
-.card:hover .card-title {
-    transform: translateY(-10%);
+.card:hover .card-title{
+    transform: translateY(0);
+}
+/* --------------- CATEGORIAS ------- */
+.card-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-flow: wrap row;
+    list-style: none;
+    position: absolute;
+    z-index: 2;
+    margin-top: 2px;
+    transform: translateY(200%);
+    transition: .1s ease .6s;
+    bottom: 5px;
 }
 
-.card:hover .card-img {
-    filter: brightness(.5);
-    transform: scale(1.3);
+.card-list .card-list-item {
+    padding: 2px 6px;
+    color: orange;
+    font-size: .8em;
+}
+
+.card:hover .card-list{
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 110px;
+        height: 200px;
+    }
+
+    .content-img::before {
+        opacity: 1;
+        padding-top: 90%;
+    }
+
+    .card-title{
+        font-size: .8em;
+        transform: translateY(0);
+    }
+
+    .card-list{
+        transform: translateY(0);
+    }
+
+    .card-list .card-list-item {
+        font-size: .5em;
+    }
+    
 }

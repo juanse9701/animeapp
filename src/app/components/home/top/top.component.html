@@ -1,13 +1,9 @@
 <section class="container">
-    <h3 class="title">Top animes</h3>
+    <h3 class="title">Top 5 Animes</h3>
 
     <div class="wrapper">
         <ng-container *ngFor="let top of topList; index as i">
-            <app-card
-                [name]="top?.title"
-                [src]="top?.image_url"
-                alt="top?.title" >
-            </app-card>
+            <app-card-top [src]="top?.image_url" [alt]="top?.title" [name]="top?.title" ></app-card-top>
         </ng-container>
     </div>
 </section>
