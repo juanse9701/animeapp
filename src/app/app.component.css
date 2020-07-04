@@ -22,6 +22,10 @@
     align-items: center;
   }
 
+  .header-nav li {
+    cursor: pointer;
+  }
+
   .nav-list {
     list-style: none;
   }

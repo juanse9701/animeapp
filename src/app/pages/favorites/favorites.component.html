@@ -1,0 +1,22 @@
+<section id="favorites">
+        <h1>Tus anime favoritos 👾</h1>
+
+    <ng-container *ngIf="(favoritesAnime$ | async) as favorites">
+        <section *ngIf="favorites.length; else noFavorites" class="gridFav">
+            <ng-container *ngFor="let favorite of favorites">
+                <article class="cardFav">
+                    <picture>
+                        <img [src]="favorite?.img" [alt]="favorite?.name" />
+                    </picture>
+                    <div class="containFav">
+                        <h3>{{favorite?.name}}</h3>
+                    </div>
+                </article>
+            </ng-container>
+        </section>
+    </ng-container>        
+</section>
+
+<ng-template #noFavorites>
+    <h2>Actualmente no tiene ningun anime en la lista de favoritos</h2>
+</ng-template>

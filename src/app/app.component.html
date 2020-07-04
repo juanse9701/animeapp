@@ -6,7 +6,10 @@
   <nav class="header-nav">
       <ul class="nav-list">
         <li class="nav-item" >Manga</li>
-        <li class="nav-item" >favoritos</li>
+        <li routerLink="/favorites" class="nav-item" >
+          Favoritos 
+          <span *ngIf="(favoritesCount$ | async ) as favorite">{{favorite?.length ? '('+favorite.length+')' : ''}}</span>
+        </li>
         <li class="nav-item" >Github</li>
       </ul>
 

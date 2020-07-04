@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FavoriteServiceService } from '../../Services/favorite-service.service';
 
 @Component({
   selector: 'app-card-top',
@@ -11,7 +12,7 @@ export class CardTopComponent implements OnInit {
   @Input() src: string;
   @Input() alt: string;
 
-  constructor() {
+  constructor(private favoriteService: FavoriteServiceService) {
     this.name = '';
     this.src = '';
     this.alt = '';
@@ -20,4 +21,10 @@ export class CardTopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addFavorite() {
+    this.favoriteService.setFavorite({
+      name: this.name,
+      img: this.src
+    });
+  }
 }

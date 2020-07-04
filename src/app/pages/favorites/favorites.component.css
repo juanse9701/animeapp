@@ -1,0 +1,32 @@
+#favorites {
+    min-height: 75vh;
+    margin: 0 5rem;
+}
+
+#favorites h1 {
+    padding: 2rem 0;
+}
+
+.gridFav {
+    display: grid;
+    gap: 5px;
+}
+
+.gridFav .cardFav{
+    display: flex;
+    background-color: white;
+}
+
+.gridFav .cardFav picture {
+    margin-right: 5px;
+}
+
+.gridFav .cardFav div h3 {
+    color: black
+}
+
+.gridFav .cardFav picture img {
+    object-fit: contain;
+    width: 100px;
+    height: 100%;
+}

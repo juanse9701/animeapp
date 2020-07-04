@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FavoriteServiceService } from './shared/Services/favorite-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'anime-list-app';
+  favoritesCount$: Observable<any>;
+
+  constructor(private favoriteService: FavoriteServiceService) {
+    this.favoritesCount$ = this.favoriteService.favorites$;
+  }
 }
